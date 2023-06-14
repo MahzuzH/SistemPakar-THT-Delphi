@@ -1,0 +1,402 @@
+object FormTabel: TFormTabel
+  Left = 497
+  Top = 368
+  Width = 1041
+  Height = 640
+  Caption = 'Tabel Database Sistem Pakar'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  OnActivate = FormActivate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object lbl1: TLabel
+    Left = 96
+    Top = 128
+    Width = 143
+    Height = 22
+    Caption = 'TABEL GEJALA'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clPurple
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbl2: TLabel
+    Left = 416
+    Top = 128
+    Width = 164
+    Height = 22
+    Caption = 'TABEL PENYAKIT'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clPurple
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbl3: TLabel
+    Left = 728
+    Top = 128
+    Width = 195
+    Height = 22
+    Caption = 'TABEL PERTANYAAN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clPurple
+    Font.Height = -19
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object lbl4: TLabel
+    Left = 24
+    Top = 512
+    Width = 105
+    Height = 19
+    Caption = 'KODE GEJALA'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
+  end
+  object lbl5: TLabel
+    Left = 24
+    Top = 552
+    Width = 108
+    Height = 19
+    Caption = 'NAMA GEJALA'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
+  end
+  object lbl6: TLabel
+    Left = 352
+    Top = 512
+    Width = 124
+    Height = 19
+    Caption = 'KODE PENYAKIT'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
+  end
+  object lbl7: TLabel
+    Left = 352
+    Top = 552
+    Width = 127
+    Height = 19
+    Caption = 'NAMA PENYAKIT'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
+  end
+  object lbl8: TLabel
+    Left = 680
+    Top = 512
+    Width = 149
+    Height = 19
+    Caption = 'KODE PERTANYAAN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
+  end
+  object lbl9: TLabel
+    Left = 680
+    Top = 552
+    Width = 101
+    Height = 19
+    Caption = 'PERTANYAAN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clMaroon
+    Font.Height = -16
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    Layout = tlCenter
+  end
+  object pnl1: TPanel
+    Left = 341
+    Top = 16
+    Width = 313
+    Height = 65
+    TabOrder = 0
+    object btn2: TBitBtn
+      Left = 72
+      Top = 16
+      Width = 161
+      Height = 33
+      Caption = 'TABEL RULE && USER'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -16
+      Font.Name = 'Times New Roman'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btn2Click
+    end
+  end
+  object smdbnvgtr1: TSMDBNavigator
+    Left = 48
+    Top = 160
+    Width = 240
+    Height = 25
+    DataSource = DM1.Gejala_ds
+    Layout = blGlyphLeft
+    ShowCaption = False
+    ShowGlyph = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 1
+  end
+  object smdbnvgtr2: TSMDBNavigator
+    Left = 376
+    Top = 160
+    Width = 240
+    Height = 25
+    DataSource = DM1.Penyakit_ds
+    Layout = blGlyphLeft
+    ShowCaption = False
+    ShowGlyph = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 2
+  end
+  object smdbnvgtr3: TSMDBNavigator
+    Left = 704
+    Top = 160
+    Width = 240
+    Height = 25
+    DataSource = DM1.Pertanyaan_ds
+    Layout = blGlyphLeft
+    ShowCaption = False
+    ShowGlyph = True
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 3
+  end
+  object smdbgrd: TSMDBGrid
+    Left = 24
+    Top = 200
+    Width = 289
+    Height = 297
+    DataSource = DM1.Gejala_ds
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Flat = False
+    BandsFont.Charset = DEFAULT_CHARSET
+    BandsFont.Color = clWindowText
+    BandsFont.Height = -11
+    BandsFont.Name = 'MS Sans Serif'
+    BandsFont.Style = []
+    Groupings = <>
+    GridStyle.Style = gsNormal
+    GridStyle.OddColor = clWindow
+    GridStyle.EvenColor = clWindow
+    TitleHeight.PixelCount = 24
+    FooterColor = clBtnFace
+    ExOptions = [eoENTERlikeTAB, eoKeepSelection, eoStandardPopup, eoBLOBEditor, eoTitleWordWrap, eoFilterAutoApply]
+    RegistryKey = 'Software\Scalabium'
+    RegistrySection = 'SMDBGrid'
+    WidthOfIndicator = 11
+    DefaultRowHeight = 17
+    ScrollBars = ssHorizontal
+  end
+  object smdbgrd11: TSMDBGrid
+    Left = 352
+    Top = 200
+    Width = 289
+    Height = 297
+    DataSource = DM1.Penyakit_ds
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 5
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Flat = False
+    BandsFont.Charset = DEFAULT_CHARSET
+    BandsFont.Color = clWindowText
+    BandsFont.Height = -11
+    BandsFont.Name = 'MS Sans Serif'
+    BandsFont.Style = []
+    Groupings = <>
+    GridStyle.Style = gsNormal
+    GridStyle.OddColor = clWindow
+    GridStyle.EvenColor = clWindow
+    TitleHeight.PixelCount = 24
+    FooterColor = clBtnFace
+    ExOptions = [eoENTERlikeTAB, eoKeepSelection, eoStandardPopup, eoBLOBEditor, eoTitleWordWrap, eoFilterAutoApply]
+    RegistryKey = 'Software\Scalabium'
+    RegistrySection = 'SMDBGrid'
+    WidthOfIndicator = 11
+    DefaultRowHeight = 17
+    ScrollBars = ssHorizontal
+  end
+  object smdbgrd12: TSMDBGrid
+    Left = 680
+    Top = 200
+    Width = 321
+    Height = 297
+    DataSource = DM1.Pertanyaan_ds
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Flat = False
+    BandsFont.Charset = DEFAULT_CHARSET
+    BandsFont.Color = clWindowText
+    BandsFont.Height = -11
+    BandsFont.Name = 'MS Sans Serif'
+    BandsFont.Style = []
+    Groupings = <>
+    GridStyle.Style = gsNormal
+    GridStyle.OddColor = clWindow
+    GridStyle.EvenColor = clWindow
+    TitleHeight.PixelCount = 24
+    FooterColor = clBtnFace
+    ExOptions = [eoENTERlikeTAB, eoKeepSelection, eoStandardPopup, eoBLOBEditor, eoTitleWordWrap, eoFilterAutoApply]
+    RegistryKey = 'Software\Scalabium'
+    RegistrySection = 'SMDBGrid'
+    WidthOfIndicator = 11
+    DefaultRowHeight = 17
+    ScrollBars = ssHorizontal
+  end
+  object dbedtKodeGejala: TDBEdit
+    Left = 152
+    Top = 512
+    Width = 137
+    Height = 23
+    DataField = 'KodeGejala'
+    DataSource = DM1.Gejala_ds
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 7
+  end
+  object dbedtNamaGejala: TDBEdit
+    Left = 152
+    Top = 552
+    Width = 161
+    Height = 23
+    DataField = 'NamaGejala'
+    DataSource = DM1.Gejala_ds
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 8
+  end
+  object dbedtKodePenyakit: TDBEdit
+    Left = 496
+    Top = 512
+    Width = 121
+    Height = 23
+    DataField = 'KodePenyakit'
+    DataSource = DM1.Penyakit_ds
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 9
+  end
+  object dbedtNamaPenyakit: TDBEdit
+    Left = 496
+    Top = 552
+    Width = 145
+    Height = 23
+    DataField = 'NamaPenyakit'
+    DataSource = DM1.Penyakit_ds
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 10
+  end
+  object dbedtKodePertanyaan: TDBEdit
+    Left = 848
+    Top = 512
+    Width = 121
+    Height = 23
+    DataField = 'KodePertanyaan'
+    DataSource = DM1.Pertanyaan_ds
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 11
+  end
+  object dbedtPertanyaan: TDBEdit
+    Left = 848
+    Top = 552
+    Width = 121
+    Height = 23
+    DataField = 'Pertanyaan'
+    DataSource = DM1.Pertanyaan_ds
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 12
+  end
+  object btn1: TButton
+    Left = 872
+    Top = 24
+    Width = 105
+    Height = 41
+    Caption = 'Log Out'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -16
+    Font.Name = 'Montserrat SemiBold'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 13
+    OnClick = btn1Click
+  end
+end
